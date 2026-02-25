@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Terminal, Menu, X, Moon, Sun } from 'lucide-react';
+import { Terminal, Menu, X, Moon, Sun, Download } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { translations } from '../i18n/translations';
 
@@ -66,9 +66,14 @@ export function Navbar() {
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
 
-            <button className="hidden md:inline-flex items-center justify-center rounded-xl bg-primary px-4 py-2 text-sm font-bold text-white transition-all hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark">
-              {t.hireMe}
-            </button>
+            <a
+              href="/CV_Jean_Pierre_Galarreta.pdf"
+              download="CV_Jean_Pierre_Galarreta.pdf"
+              className="hidden md:inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2 text-sm font-bold text-white transition-all hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark"
+            >
+              <Download size={16} />
+              {t.downloadCV}
+            </a>
 
             {/* Mobile Menu Button */}
             <button
@@ -113,9 +118,14 @@ export function Navbar() {
             >
               {t.contact}
             </Link>
-            <button className="w-full mt-4 inline-flex items-center justify-center rounded-xl bg-primary px-4 py-2 text-sm font-bold text-white transition-all hover:bg-blue-600">
-              {t.hireMe}
-            </button>
+            <a
+              href="/CV_Jean_Pierre_Galarreta.pdf"
+              download="CV_Jean_Pierre_Galarreta.pdf"
+              className="w-full mt-4 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2 text-sm font-bold text-white transition-all hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark"
+            >
+              <Download size={16} />
+              {t.downloadCV}
+            </a>
           </div>
         </div>
       )}

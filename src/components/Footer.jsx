@@ -13,20 +13,20 @@ export function Footer() {
           <div className="size-6 rounded bg-primary/20 text-primary flex items-center justify-center">
             <Terminal size={14} />
           </div>
-          <span className="font-display font-bold text-slate-900 dark:text-white">John Doe</span>
+          <span className="font-display font-bold text-slate-900 dark:text-white">Jean Pierre Galarreta</span>
         </div>
 
         <div className="flex gap-6">
-          <a href="#" className="text-slate-500 hover:text-primary transition-colors" aria-label="GitHub">
+          <a href="https://github.com/PierreVega17" className="text-slate-500 hover:text-primary transition-colors" aria-label="GitHub"   target="_blank" rel="noopener noreferrer">
             <Github size={24} />
           </a>
-          <a href="#" className="text-slate-500 hover:text-primary transition-colors" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/jean-pierre-galarreta-vega/" className="text-slate-500 hover:text-primary transition-colors" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <Linkedin size={24} />
           </a>
         </div>
 
         <p className="text-sm text-slate-500 dark:text-slate-500">
-          © {new Date().getFullYear()} John Doe. {t.rights}
+          © {new Date().getFullYear()} Jean Pierre Galarreta. {t.rights}
         </p>
       </div>
     </footer>
