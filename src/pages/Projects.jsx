@@ -1,14 +1,13 @@
 import { Grid, Code2, Terminal, Database, LayoutTemplate, Eye, ExternalLink, Github, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useStore } from '../store/useStore';
 import { translations } from '../i18n/translations';
 
 const projectImages = [
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDoT55oyVQz917RV0TFnWlky8lVksNwmjQB7SRHjG3NryYCaw5ncSQXLdp-MTIRqKQu-jrzxN7PLfvzXkQwQdiQSN2a909hzNDf7DaXe0VD0Zd-ra0x9fQJSk14BZmGsHXrBfbHY2F9ypBqKNPMPrNHMPFo2PhYrKxEeKZ0QnjA5QNVz7Ir9MKwxm2iPJ9sHVeLWtJE6I0HoWrzub19r4o-yHzAwX5BNjlr5KXyrpoq6hzbpnCSS-arZMsZzC6qNFAJcQx9oYy6dhg",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDmNrPFRkkOtdv6zdJxdtGwrdlTHH3w1aL40_SmzMJ2jGAtvvFS9e392_rkftN-0SiVxojpCWJlA8enOdCWf3v8kILNVF8ev5xxPHiCI2triO8-tpvSC7YzfbQ4fgbT7JVh7GqIlEydsS3OO5hKUzbhUicger7odBoAvQQVLidlASJDqIVuSykXmGZjWSvmy9KY9hHSOt_U_ePGbpg0ya9LXfTK8XRcyi653Z5Kx0dW0z-TxUVCMaYluU7hb0JjRjkM19fyiv33GFc",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAMAoCvTkVtaG3jQEPaoP32pB6Xte7HgNR4wRwE-YGQ9HYCGqQDUucyyCPI8px3qOFe7jp_8eVcM9TAly0Qa0yJZRvtEWKvt8ITnVLaT8incAJJKmXZQUMSI0vFirxQjq0HxHjvnpjbz48oO8KFAXIF9Ra0QSTwqBC3d3OCLuXX_mPZCLY_ngoQbYMBS6vRf7D08Aspce0lLt0dPGvjgV2osJh0Dm_UciIU-zi8-p7pJtQYKSSk6D9OBdYx0aWFpzmBHzjXps2JfHo",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuA_4V3u93mECfWbYFgkwcHer7pE8GS-5CsN27zqUa-SlQYsSMjySTwuPvlGZWaL_RJ1gwILXeYFYnhrM1nAD9gd4iTKG3Jwv1D6J37GUa1cWh5hnjTTzrARCLhQEc3jwVTBlM_FO1iGE_HpuubpQRBhpS1U-Znmbn2VGhEJjdGP1eL6F33vnteufgAIkNddgE3fHAEkK57scncSaQP2DzaOMxfwsCBf8JPjDH4Wh9c_IhwfCb99pKm142iX1Q_BHmc9Uj4i1OMenEM",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuBs7eoE4pAop-6U3lB0ybOgaLFkVCn3PhHsd_-bAPhseDQSyVjg4aJaiqyKt5ihxg2_8z36119XViNIXr8-IuSP6WNNYAr6Ud5F8oigb38lonuncKBvrPFIDQvrwKO8qY930dx_LtHx7YGWp0xJ9NrSTRaVcG4qH1GB-MaT7SgutF9rsSm7AGrLM4zDiQ5QzhFD2PdKQaDRqqUTUi7rV56n1An53TR-8Lrgk_ose5byTWww-s3W1dFyD7SmH1KvC8S0lilCb1G7dyE",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuBFJh57ogEjBmWRtCnbduxi1p48UGPLeOczdx3lTGPWiKTk7-n_brkFMTp_SuzAUl0359R-DtjyjmU7XzN8KmmaWnGjNOXmZK3qXvGYms_NXGd43cx9tthV_JtIlIURuvtqRn1q_tGJ0ZCCiq8uZ0wVkncG56wHaIOjdythoJKFDfxCtBvBrDFzFTB9TkDQPJJSkZbN0ZIiCTSs_065n-RKcYcftM3d3WqdrO7VTpogziZR4Z69vqc5yGqWRnNuVxQ7vEbDFIBxZQs",
+  "finanzas-personales.png",
+  "blog.png",
+  "app-tareas.png",
+  "poke-app.png",
 ];
 
 const projectTags = [
@@ -76,7 +75,7 @@ export function Projects() {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 pt-6">
         {projects.map((project, index) => (
           <div key={index} className="group flex flex-col gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
             <div
@@ -84,10 +83,10 @@ export function Projects() {
               style={{ backgroundImage: `url("${project.image}")` }}
             >
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
-                <button className="bg-primary text-white p-2 rounded-full hover:bg-primary/90" title="View Code">
+                <button className="bg-primary text-white p-2 rounded-full hover:bg-primary/90 cursor-pointer" title="View Code" onClick={() => window.open(project.githubUrl, '_blank')}>
                   <Code2 size={20} />
                 </button>
-                <button className="bg-white text-slate-900 p-2 rounded-full hover:bg-slate-100" title="Live Preview">
+                <button className="bg-white text-slate-900 p-2 rounded-full hover:bg-slate-100 cursor-pointer" title="Live Preview" onClick={() => window.open(project.url, '_blank')}>
                   <Eye size={20} />
                 </button>
               </div>
@@ -112,11 +111,11 @@ export function Projects() {
               </div>
 
               <div className="flex gap-3 mt-4 pt-4 border-t border-slate-100 dark:border-slate-800">
-                <button className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all text-sm font-semibold">
+                <button onClick={() => window.open(project.url, '_blank')} className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all text-sm font-semibold cursor-pointer">
                   <ExternalLink size={18} />
                   {t.liveDemo}
                 </button>
-                <button className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all text-sm font-semibold">
+                <button onClick={() => window.open(project.githubUrl, '_blank')} className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all text-sm font-semibold cursor-pointer">
                   <Github size={18} />
                   {t.github}
                 </button>
@@ -137,10 +136,10 @@ export function Projects() {
               {t.ctaDesc}
             </p>
           </div>
-          <button className="flex min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-12 px-6 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-[0.015em] transition-all hover:scale-105 shadow-lg shadow-primary/25">
+          <Link to="/contact" className="flex min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-12 px-6 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-[0.015em] transition-all hover:scale-105 shadow-lg shadow-primary/25" >
             <Mail size={20} />
             <span className="truncate">{t.contactMe}</span>
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ export const translations = {
       about: 'About me',
       contact: 'Contact',
       downloadCV: 'Download CV',
-      brand: 'Jean Pierre Galarreta | Fullstack Dev',
+      brand: 'Jean Galarreta | Fullstack Dev',
     },
     // Home
     home: {
@@ -55,28 +55,28 @@ export const translations = {
       contactMe: 'Contact Me',
       items: [
         {
-          title: 'E-commerce Dashboard',
-          description: 'A comprehensive admin dashboard built with React and Material UI, featuring real-time sales tracking and inventory management.',
+          title: 'Personal Finance App',
+          description: 'A full-stack personal finance manager built with React for the frontend and Node.js/Express for the backend, featuring real-time expense tracking and budgeting tools.',
+          url: 'https://frontend-finanzas-mu.vercel.app/',
+          githubUrl: 'https://github.com/PierreVega17?tab=repositories',
         },
         {
-          title: 'Social Media App',
-          description: 'Full-stack social network utilizing Node.js for backend logic and MongoDB for flexible data storage.',
+          title: 'Blog App',
+          description: 'Full-stack blog platform utilizing Node.js for backend logic and MongoDB for flexible data storage.',
+          url: 'https://blog-onay.onrender.com/',
+          githubUrl: 'https://github.com/PierreVega17?tab=repositories',
         },
         {
           title: 'Task Manager API',
-          description: 'Robust RESTful API designed with Python Flask and PostgreSQL, implementing JWT authentication.',
+          description: 'Robust RESTful API designed with Node.js, Express, and PostgreSQL, implementing JWT authentication.',
+          url: 'https://app-task-client.vercel.app/boards',
+          githubUrl: 'https://github.com/PierreVega17?tab=repositories',
         },
         {
-          title: 'Real Estate Platform',
-          description: 'Property listing site with advanced filtering, interactive maps, and virtual tour integration.',
-        },
-        {
-          title: 'Weather Forecast App',
-          description: 'Real-time weather data visualization using D3.js and OpenWeatherMap API for accurate forecasting.',
-        },
-        {
-          title: 'Chat Application',
-          description: 'Real-time WebSocket-based chat app with end-to-end encryption and room-based messaging features.',
+          title: 'Pokemon App',
+          description: 'Interactive Pokemon encyclopedia with search and filtering capabilities.',
+          url: 'https://poke-app-client-mu.vercel.app/',
+          githubUrl: 'https://github.com/PierreVega17?tab=repositories',
         },
       ],
     },
@@ -217,28 +217,28 @@ export const translations = {
       contactMe: 'Contáctame',
       items: [
         {
-          title: 'Dashboard de E-commerce',
-          description: 'Un completo panel de administración construido con React y Material UI, con seguimiento de ventas en tiempo real y gestión de inventario.',
+          title: 'App de Finanzas Personales',
+          description: 'Un gestor de finanzas personales fullstack construido con React para el frontend y Node.js/Express para el backend, con seguimiento de gastos en tiempo real y herramientas de presupuesto.',
+          url: 'https://frontend-finanzas-mu.vercel.app/',
+          githubUrl: 'https://github.com/PierreVega17?tab=repositories',
         },
         {
-          title: 'App de Redes Sociales',
-          description: 'Red social fullstack que utiliza Node.js para la lógica del backend y MongoDB para almacenamiento flexible de datos.',
+          title: 'Plataforma de Blog',
+          description: 'Plataforma de blog fullstack utilizando Node.js para el backend y MongoDB para almacenamiento flexible de datos.',
+          url: 'https://blog-onay.onrender.com/',
+          githubUrl: 'https://github.com/PierreVega17?tab=repositories',
         },
         {
           title: 'API de Gestión de Tareas',
-          description: 'API RESTful robusta diseñada con Python Flask y PostgreSQL, implementando autenticación JWT.',
+          description: 'API RESTful robusta diseñada con Node.js, Express, MongoDB y PostgreSQL, implementando autenticación JWT.',
+          url: 'https://app-task-client.vercel.app/boards',
+          githubUrl: 'https://github.com/PierreVega17?tab=repositories',
         },
         {
-          title: 'Plataforma Inmobiliaria',
-          description: 'Sitio de listados de propiedades con filtrado avanzado, mapas interactivos e integración de tours virtuales.',
-        },
-        {
-          title: 'App de Pronóstico del Tiempo',
-          description: 'Visualización de datos meteorológicos en tiempo real usando D3.js y la API de OpenWeatherMap.',
-        },
-        {
-          title: 'Aplicación de Chat',
-          description: 'App de chat en tiempo real basada en WebSockets con cifrado de extremo a extremo y mensajería por salas.',
+          title: 'Enciclopedia de Pokemons',
+          description: 'Enciclopedia interactiva de Pokemons con buscador y filtrado avanzado.',
+          url: 'https://poke-app-client-mu.vercel.app/',
+          githubUrl: 'https://github.com/PierreVega17?tab=repositories',
         },
       ],
     },

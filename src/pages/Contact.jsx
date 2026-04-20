@@ -213,7 +213,7 @@ export function Contact() {
             <button
               type="submit"
               disabled={formState !== 'idle'}
-              className="w-full flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-base font-bold text-white transition-all hover:bg-blue-600 hover:shadow-lg hover:shadow-primary/25 disabled:opacity-70 disabled:cursor-not-allowed group"
+              className="w-full flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 text-base font-bold text-white transition-all hover:bg-blue-600 hover:shadow-lg hover:shadow-primary/25 disabled:opacity-70 disabled:cursor-not-allowed group cursor-pointer"
             >
               {formState === 'sending' ? (
                 <>
